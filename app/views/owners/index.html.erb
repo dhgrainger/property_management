@@ -1,0 +1,5 @@
+<ul>
+  <% @owners.each do |owner| %>
+    <li><%= "#{owner.first_name} #{owner.last_name} Email: #{owner.email} Company: #{owner.company}"%></li>
+  <% end %>
+</ul>

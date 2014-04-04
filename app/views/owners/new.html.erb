@@ -1,0 +1,9 @@
+<%= simple_form_for @owner do |f| %>
+  <%= f.input :first_name %>
+  <%= f.input :last_name %>
+  <%= f.input :email %>
+  <%= f.input :company %>
+  <%= f.button :submit, "Register Owner" %>
+<% end %>
+
+<%= link_to 'Owners', owners_path %>

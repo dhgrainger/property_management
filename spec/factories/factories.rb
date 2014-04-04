@@ -8,4 +8,11 @@ FactoryGirl.define do
     postal_code '02129'
     description 'Abandoned warehouse'
   end
+
+   factory :owner do
+    first_name 'Owner'
+    last_name 'Ownerson'
+    sequence(:email) {|n| "test#{n}@test.com"}
+    company 'Ballers.inc'
+  end
 end
