@@ -1,0 +1,6 @@
+<ul>
+  <% @buildings.each do |building| %>
+  <li><%= "#{building.address} #{building.city}, #{building.state}, #{building.postal_code} - #{building.description} "%></li>
+
+  <% end %>
+</ul>
