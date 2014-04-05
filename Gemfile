@@ -35,13 +35,20 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+
 group :test, :development do
-  gem 'pry-rails'
-  gem 'capybara'
   gem 'rspec-rails'
-  gem 'shoulda'
-  gem 'valid_attribute'
   gem 'factory_girl_rails'
+  gem 'pry-rails'
+end
+
+group :development do
+  gem 'quiet_assets'
+end
+
+group :test do
+  gem 'capybara'
+  gem 'shoulda'
   gem 'launchy'
 end
 

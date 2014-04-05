@@ -7,6 +7,7 @@ FactoryGirl.define do
     state 'MA'
     postal_code '02129'
     description 'Abandoned warehouse'
+    owner
   end
 
    factory :owner do
