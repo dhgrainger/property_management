@@ -17,6 +17,12 @@ class OwnersController < ApplicationController
       end
   end
 
+  def destroy
+    @owner = Owner.find(params['id'])
+    @owner.destroy
+    render action: 'new'
+  end
+
   private
     def owner_params
       params.require(:owner).permit(:first_name, :last_name, :email)

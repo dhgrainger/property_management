@@ -6,7 +6,7 @@ feature 'User registers owner', %q{
   So that I can keep track of our relationships with owners
 } do
 
-  owner = FactoryGirl.create(:owner)
+
 
   before(:each) do
     visit '/owners/new'
@@ -14,7 +14,7 @@ feature 'User registers owner', %q{
 
   context 'User creates owner with valid attributes' do
     it 'creates a building with valid attributes' do
-
+      owner = FactoryGirl.create(:owner)
       fill_in "First name", with: owner.first_name
       fill_in "Last name", with: owner.last_name
       fill_in "Email", with: owner.email
@@ -43,7 +43,8 @@ feature 'User registers owner', %q{
       expect(page).to have_content("Emailcan't be blank")
     end
 
-    it 'gets replies invalid when an invalid email is entered' do
+    it 'gets invalid when an invalid email is entered' do
+      owner = FactoryGirl.create(:owner)
       fill_in "First name", with: owner.first_name
       fill_in "Last name", with: owner.last_name
       fill_in "Email", with: "asdasdas"

@@ -6,7 +6,7 @@ feature 'User registers building', %q{
   So that I can refer back to pertinent information
 } do
 
-  building = FactoryGirl.create(:building)
+
 
   before(:each) do
     visit '/buildings/new'
@@ -14,7 +14,7 @@ feature 'User registers building', %q{
 
   context 'a building is entered with valid attributes' do
     it 'create a building with valid attributes' do
-
+      building = FactoryGirl.create(:building)
       fill_in "Address", with: building.address
       fill_in "City", with: building.city
       select building.state, from: "State"
@@ -45,7 +45,7 @@ feature 'User registers building', %q{
     end
 
     it 'create a building with a valid postal code' do
-
+      building = FactoryGirl.create(:building)
       fill_in "Address", with: building.address
       fill_in "City", with: building.city
       select building.state, from: "State"

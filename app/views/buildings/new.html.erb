@@ -4,6 +4,7 @@
   <%= f.input :state, collection: @states %>
   <%= f.input :postal_code %>
   <%= f.input :description %>
+  <%= f.association :owner, label_method: :full_name %>
   <%= f.button :submit, "Register Building" %>
 <% end %>
 
